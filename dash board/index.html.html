@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySpace | Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+
+        <aside class="sidebar" id="sidebar">
+            <a href="#" class="brand">
+                <span class="brand-icon">✦</span>
+                <span>Study<span class="brand-accent">Space</span></span>
+            </a>
+
+            <p class="nav-label">WORKSPACE</p>
+
+            <nav class="navigation">
+                <a href="#overview" class="nav-link active">
+                    <span>▦</span> Overview
+                </a>
+                <a href="#schedule" class="nav-link">
+                    <span>▣</span> My Schedule
+                </a>
+                <a href="#assignments" class="nav-link">
+                    <span>✎</span> Assignments
+                </a>
+                <a href="#progress" class="nav-link">
+                    <span>◷</span> Study Progress
+                </a>
+                <a href="#notes" class="nav-link">
+                    <span>☷</span> Quick Notes
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="tip-card">
+                    <span class="tip-icon">✧</span>
+                    <h3>Little reminder</h3>
+                    <p>Consistency beats perfection. Keep showing up!</p>
+                </div>
+                <p class="sidebar-footer">STUDY SMARTER · GROW EVERY DAY</p>
+            </div>
+        </aside>
+
+        <main class="main-content" id="overview">
+
+            <header class="topbar">
+                <button class="menu-button" id="menuToggle"
+                        aria-label="Toggle navigation">☰</button>
+
+                <div class="breadcrumb">Workspace <span>/</span> Overview</div>
+
+                <div class="topbar-actions">
+                    <span class="today-label" id="todayDate"></span>
+                    <button id="themeToggle" class="theme-button"
+                            aria-label="Switch color theme">
+                        <span id="themeIcon">☾</span>
+                        <span id="themeLabel">Dark mode</span>
+                    </button>
+                </div>
+            </header>
+
+            <section class="welcome">
+                <div>
+                    <span class="eyebrow">YOUR LEARNING SPACE</span>
+                    <h1>Keep growing, <span>keep glowing.</span> ✨</h1>
+                    <p>Every lesson brings you one step closer to your goals.</p>
+                </div>
+                <div class="welcome-art" aria-hidden="true">
+                    <div class="book">▤</div>
+                    <span class="star star-one">✦</span>
+                    <span class="star star-two">✧</span>
+                    <span class="art-circle"></span>
+                </div>
+            </section>
+
+            <section class="stats-grid" aria-label="Study statistics">
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon purple">▣</span>
+                        <span class="stat-caption">This term</span>
+                    </div>
+                    <h2 id="courseStat">6</h2>
+                    <p>My courses</p>
+                    <span class="stat-note">Keep learning new things</span>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon green">✓</span>
+                        <span class="stat-caption">Completed</span>
+                    </div>
+                    <h2 id="completedStat">3</h2>
+                    <p>Assignments done</p>
+                    <span class="stat-note">Celebrate every win</span>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon orange">◷</span>
+                        <span class="stat-caption">To do</span>
+                    </div>
+                    <h2 id="pendingStat">3</h2>
+                    <p>Pending assignments</p>
+                    <span class="stat-note">One step at a time</span>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-top">
+                        <span class="stat-icon blue">⌁</span>
+                        <span class="stat-caption">Weekly goal</span>
+                    </div>
+                    <h2><span id="hoursStat">8</span><small> hrs</small></h2>
+                    <p>Study time logged</p>
+                    <span class="stat-note">Make time for your goals</span>
+                </article>
+            </section>
+
+            <div class="content-grid">
+                <section class="panel schedule-panel" id="schedule">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="eyebrow">PLAN YOUR DAY</span>
+                            <h2>Class Schedule</h2>
+                        </div>
+                        <span class="live-badge">● Your week</span>
+                    </div>
+
+                    <div class="schedule-list" id="scheduleList">
+                        <article class="class-item">
+                            <div class="class-time">08:00 AM</div>
+                            <div class="class-color purple-bg"></div>
+                            <div class="class-details">
+                                <h3>Introduction to Programming</h3>
+                                <p>CSC 101 · Lecture Hall A</p>
+                            </div>
+                            <span class="class-tag">Computer Science</span>
+                        </article>
+
+                        <article class="class-item">
+                            <div class="class-time">10:00 AM</div>
+                            <div class="class-color green-bg"></div>
+                            <div class="class-details">
+                                <h3>Mathematics</h3>
+                                <p>MTH 101 · Room 12</p>
+                            </div>
+                            <span class="class-tag">Mathematics</span>
+                        </article>
+
+                        <article class="class-item">
+                            <div class="class-time">12:00 PM</div>
+                            <div class="class-color orange-bg"></div>
+                            <div class="class-details">
+                                <h3>Communication Skills</h3>
+                                <p>GST 101 · Lecture Hall B</p>
+                            </div>
+                            <span class="class-tag">General Studies</span>
+                        </article>
+
+                        <article class="class-item">
+                            <div class="class-time">02:00 PM</div>
+                            <div class="class-color blue-bg"></div>
+                            <div class="class-details">
+                                <h3>Computer Fundamentals</h3>
+                                <p>CSC 103 · Computer Lab</p>
+                            </div>
+                            <span class="class-tag">Computer Science</span>
+                        </article>
+                    </div>
+                    <p class="demo-note">Sample timetable — edit it to match your classes.</p>
+                </section>
+
+                <section class="panel progress-panel" id="progress">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="eyebrow">YOUR ACHIEVEMENTS</span>
+                            <h2>Study Progress</h2>
+                        </div>
+                        <span class="progress-symbol">↗</span>
+                    </div>
+
+                    <div class="progress-circle" id="progressCircle"
+                         role="img" aria-label="Study progress 72 percent">
+                        <div class="circle-inner">
+                            <strong id="progressPercent">72%</strong>
+                            <span>Completed</span>
+                        </div>
+                    </div>
+
+                    <p class="center-text">You're building a great habit!</p>
+
+                    <div class="progress-legend">
+                        <span><i class="legend-dot purple-dot"></i> Completed</span>
+                        <strong id="progressLegend">72%</strong>
+                    </div>
+                    <div class="progress-legend">
+                        <span><i class="legend-dot muted-dot"></i> Remaining</span>
+                        <strong id="remainingPercent">28%</strong>
+                    </div>
+
+                    <button class="outline-button" id="updateProgress">
+                        Update progress
+                    </button>
+                </section>
+            </div>
+
+            <div class="content-grid lower-grid">
+                <section class="panel assignments-panel" id="assignments">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="eyebrow">STAY ON TRACK</span>
+                            <h2>Assignments</h2>
+                        </div>
+                        <button id="addAssignment" class="small-primary">
+                            + Add new
+                        </button>
+                    </div>
+
+                    <div class="assignment-list" id="assignmentList"></div>
+                    <p class="demo-note">Sample assignments are for practice.</p>
+                </section>
+
+                <section class="panel notes-panel" id="notes">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="eyebrow">YOUR PERSONAL SPACE</span>
+                            <h2>Quick Notes</h2>
+                        </div>
+                        <span class="notes-icon">✎</span>
+                    </div>
+
+                    <textarea id="quickNotes"
+                        placeholder="Write down an idea, a reminder, or something you learned today..."></textarea>
+
+                    <div class="notes-footer">
+                        <span id="notesStatus">Your ideas matter.</span>
+                        <button id="saveNotes" class="small-primary">Save notes</button>
+                    </div>
+                </section>
+            </div>
+
+            <footer class="page-footer">
+                <p>Made with <span>♥</span> for your brighter future.</p>
+                <small>STUDYSPACE · LEARN SOMETHING NEW EVERY DAY</small>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
